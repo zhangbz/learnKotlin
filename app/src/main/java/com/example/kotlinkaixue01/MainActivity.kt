@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         println(Singleton.id.toString() + " : " + Singleton.getName())
 
         test02()
+
+        test03()
     }
 
     fun printViewId(view: View?): Unit {
@@ -74,5 +76,13 @@ class MainActivity : AppCompatActivity() {
 //        intArr 平均值：7050, 操作耗时：5   //效率惊人
 //        list 平均值：7050, 操作耗时：292
 
+    }
+
+    fun test03() {
+        var student = Student("bob","007")
+        student.show()
+
+        val list = listOf(21, 44, 11, 33, 78)
+        list.filter { i -> i%3 == 0 }.map { i -> println(i) }
     }
 }
